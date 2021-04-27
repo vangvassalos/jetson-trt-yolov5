@@ -3,17 +3,20 @@
 set -e
 
 work_dir=$(pwd)
+sudo apt update
+pip3 install --upgrade pip
+sudo apt -y install gfortran libopenblas-dev liblapack-dev
 
 cd ./install-yolov5s-dependencies
-install_pycuda_v2019.1.2.sh
+#./install_pycuda_v2019.1.2.sh
 echo ----------------------------------
 echo pycuda v2019.1.2 installed
 echo
-install_torch_v1.7.0.sh
+#./install_torch_v1.7.0.sh
 echo ----------------------------------
 echo torch v1.7.0 installed
 echo
-install_torchvision_v0.8.1.sh
+#./install_torchvision_v0.8.1.sh
 echo ----------------------------------
 echo torchvision v0.8.1 installed
 echo
